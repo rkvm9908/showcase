@@ -122,7 +122,7 @@ export default function App() {
   return (
     <div className="app">
       <aside className="side glass">
-        <div className="avatar">MR</div>
+        <div className="avatar">RK</div>
         <div>
           <h1>MATHUPRASANTH R. K.</h1>
           <p className="role">M.Sc. Information Technology</p>

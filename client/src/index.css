@@ -23,7 +23,7 @@ body::after { width: 560px; height: 560px; background: #4338ca; bottom: -160px; 
 
 /* ---------- Layout ---------- */
 .app { display: grid; grid-template-columns: 260px 1fr; gap: 20px; padding: 20px; max-width: 1280px; margin: 0 auto; }
-.side { position: sticky; top: 20px; height: calc(100vh - 40px); border-radius: 22px; padding: 22px;
+.side { position: sticky; top: 20px; min-height: calc(100vh - 40px); border-radius: 22px; padding: 22px;
   display: flex; flex-direction: column; gap: 18px; }
 .avatar { width: 64px; height: 64px; border-radius: 18px; display: grid; place-items: center;
   font-weight: 700; font-size: 22px; color: var(--on-accent);
@@ -154,7 +154,7 @@ label.inline input { width: auto; margin: 0; }
 
 @media (max-width: 860px) {
   .app { grid-template-columns: 1fr; padding: 12px; }
-  .side { position: static; height: auto; }
+  .side { position: static; height: auto; min-height: 0; }
   .links { flex-direction: row; flex-wrap: wrap; gap: 16px; margin-top: 0; }
   .detail { display: block; overflow-y: auto; max-height: 92vh; }
   .detail .media img { max-height: 300px; }
@@ -188,3 +188,7 @@ select option { color: #111; }
 .imgs .cover { position: absolute; top: 4px; left: 4px; z-index: 1; font-size: 10px; font-weight: 700; padding: 2px 8px;
   border-radius: 999px; background: var(--accent); color: var(--on-accent); }
 .imgs .cover.new { background: #6366f1; color: #fff; }
+
+@media (max-height: 820px) {
+  .side { position: static; }
+}
